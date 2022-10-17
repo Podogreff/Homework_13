@@ -11,7 +11,11 @@ def remove_negatives(nums):
 
 
 def choose_func(nums, square, negative):
-    if nums == negative(nums):
+    count = 0
+    for i in nums:
+        if i > 0:
+            count += 1
+    if len(nums) == count:
         return square(nums)
     else:
         return negative(nums)
